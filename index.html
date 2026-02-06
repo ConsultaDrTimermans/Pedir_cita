@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta Dr. Tímermans</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- Menú hamburguesa -->
+  <header class="header">
+    <div class="logo">Dr. Tímermans</div>
+    <div class="hamburger" id="hamburger">
+      &#9776;
+    </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quien-soy.html">Quien soy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Foto del médico -->
+  <section class="foto-section">
+    <img src="images/foto_perfil.jpeg" alt="Dr. Rafael Tímermans" class="foto-perfil">
+    <h2>Rafael Tímermans del Olmo</h2>
+    <p>Médico de familia y especialista en Medicina del Trabajo</p>
+  </section>
+
+  <main>
+
+    <!-- Tipos de consulta -->
+    <section class="contenido">
+      <h1>TIPOS DE CONSULTA</h1>
+
+      <ul class="consultas">
+        <li>
+          <h3 class="accordion-toggle">Medicina General Sanitas</h3>
+          <div class="accordion-content">
+            <p>Consulta presencial y videoconsulta disponibles</p>
+          </div>
+        </li>
+
+        <li>
+          <h3 class="accordion-toggle">Consultas Privadas</h3>
+          <div class="accordion-content">
+            <ul>
+              <li>Consulta Presencial de Medicina General</li>
+              <li>Videoconsulta o Consulta Telefónica de Medicina General</li>
+              <li>Consulta Presencial de Medicina del Trabajo</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Precios -->
+    <section class="contenido">
+      <h1>PRECIOS</h1>
+      <ul class="precios">
+        <li>Consulta Presencial: <span class="precio">60€</span></li>
+        <li>Videoconsulta / Telefónica: <span class="precio">25€</span></li>
+      </ul>
+    </section>
+
+    <!-- Botón de cita -->
+    <div class="cta-container">
+      <a href="https://koalendar.com/e/reunirse-con-rafael-timermans" class="cta">
+        RESERVAR CITA
+      </a>
+    </div>
+
+
+    <!-- Perfil extendido -->
+    <!-- <section class="contenido">
+      <ul>
+        <li>20 años de experiencia en centros del Servicio Madrileño de Salud.</li>
+        <li>Médico del Trabajo en mutuas y servicios de prevención.</li>
+        <li>Asesoramiento ante mutuas e INSS.</li>
+      </ul>
+    </section> -->
+<section class="experience-home-banner">
+  <div class="experience-home-banner__filter">
+    <div class="content-wrapper">
+      <h2>Perfil del Dr. Rafael Tímermans</h2>
+      <h3>Conoce su experiencia y los servicios que ofrece para cuidar tu salud.</h3>
+
+      <div class="flex-wrapper">
+        <div class="flex">
+          <img src="images/experiencia.svg" width="55" height="55" alt="Experiencia médica">
+          <h3>Experiencia consolidada<br><span>20 años en centros del Servicio Madrileño de Salud</span></h3>
+        </div>
+
+        <div class="flex">
+          <img src="images/especialista.svg" width="55" height="55" alt="Especialista Medicina del Trabajo">
+          <h3>Especialista en Medicina del Trabajo<br><span>Médico en mutuas y servicios de prevención</span></h3>
+        </div>
+
+        <div class="flex">
+          <img src="images/asesoramiento.svg" width="55" height="55" alt="Asesoramiento profesional">
+          <h3>Asesoramiento profesional<br><span>Ante mutuas e INSS</span></h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Mapa embebido -->
+<section class="map-section">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.2479693389228!2d-3.8177379225552275!3d40.46977887143106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4186980507fea5%3A0x19ae63e11dc312ae!2sC.%20de%20Zum%C3%A1rraga%2C%204%2C%20Moncloa%20-%20Aravaca%2C%2028023%20Madrid!5e0!3m2!1sen!2ses!4v1770419461617!5m2!1sen!2ses"
+    width="100%"
+    height="350"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+<!-- Botón Cómo llegar -->
+<div class="cta-container">
+  <a href="https://www.google.com/maps?kgmid=/g/11t2l511ff&hl=es-ES&shndl=30&kgs=46caf2dd921adffa&shem=shrtsdl&um=1&ie=UTF-8&fb=1&gl=es&sa=X&geocode=KQHIuXYXh0ENMbZsGFFOfAbE&daddr=C.+de+Zum%C3%A1rraga,+4,+Moncloa+-+Aravaca,+28023+Madrid"
+     class="cta"
+     target="_blank"
+     rel="noopener noreferrer">
+    Cómo llegar
+  </a>
+</div>
+
+
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
