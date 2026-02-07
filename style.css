@@ -1,4 +1,18 @@
-/* ===== Reset y cuerpo ===== */
+/* ==================================================
+   VARIABLES BASE
+================================================== */
+:root {
+  --color-primary: #0066cc;
+  --color-primary-dark: #004a99;
+  --color-primary-light: #5ec0f8;
+  --color-primary-lightest: #80d3f9;
+  --color-text: #333;
+  --color-text-soft: #555;
+}
+
+/* ==================================================
+   RESET Y BODY
+================================================== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,37 +20,14 @@ body {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  color: #333;
+  color: var(--color-text);
   line-height: 1.6;
   background: linear-gradient(160deg, #eaf4ff 0%, #ffffff 100%);
 }
 
-
-/* ===== quien soy ===== */
-.hero-quien-soy {
-  width: 100%;
-  height: auto; /* Ajusta según la imagen */
-  min-height: 400px; /* Mantener un mínimo de altura */
-  background-image: url('images/foto_perfil_wide.jpeg');
-  background-size: contain;  /* Importante: se ve toda la imagen */
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.hero-overlay {
-  /* background-color: rgba(0,0,0,0.3); */  /* ¡quitamos esto! */
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-
-
-/* ===== Menú hamburguesa ===== */
+/* ==================================================
+   HEADER / NAV
+================================================== */
 .header {
   display: flex;
   justify-content: space-between;
@@ -49,7 +40,7 @@ body {
   z-index: 1000;
 }
 
-.header .logo {
+.logo {
   font-weight: bold;
   font-size: 1.3em;
 }
@@ -82,40 +73,35 @@ body {
   display: none;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .nav {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: rgba(0, 102, 204, 0.95);
-    width: 200px;
-    display: none;
-    flex-direction: column;
-    padding: 10px 0;
-    border-radius: 0 0 5px 5px;
-  }
-
-  .nav ul {
-    flex-direction: column;
-  }
-
-  .nav ul li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .hamburger {
-    display: block;
-  }
+/* ==================================================
+   HERO QUIEN SOY
+================================================== */
+.hero-quien-soy {
+  width: 100%;
+  min-height: 400px;
+  background-image: url('images/foto_perfil_wide.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 20px 0 40px 0;
 }
 
+.hero-overlay {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
 
-
-/* ===== Foto del médico ===== */
+/* ==================================================
+   FOTO PERFIL
+================================================== */
 .foto-section {
   text-align: center;
-  margin-bottom: 40px;
+  margin: 20px 0 40px 0;
 }
 
 .foto-perfil {
@@ -129,17 +115,19 @@ body {
 }
 
 .foto-section h2 {
-  color: #0066cc;
+  color: var(--color-primary);
   margin: 10px 0 5px 0;
 }
 
 .foto-section p {
   font-size: 1rem;
-  color: #555;
+  color: var(--color-text-soft);
   margin: 0;
 }
 
-/* ===== Secciones ===== */
+/* ==================================================
+   SECCIONES GENERALES
+================================================== */
 .contenido {
   background-color: rgba(255,255,255,0.85);
   padding: 25px 20px;
@@ -148,14 +136,18 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* ===== Titulos ===== */
+/* ==================================================
+   TITULOS
+================================================== */
 h1 {
   font-size: 2em;
-  color: #0066cc;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  color: var(--color-primary);
+  margin: 20px 0;
 }
 
+/* ==================================================
+   ACORDEÓN
+================================================== */
 h3.accordion-toggle {
   background-color: #f4f7fb;
   padding: 12px 15px;
@@ -181,17 +173,17 @@ h3.accordion-toggle.active::after {
   transform: rotate(90deg);
 }
 
-/* ===== Acordeón ===== */
 .accordion-content {
-  display: block; /* empieza abierto */
+  display: block;
   margin-top: 10px;
 }
 
-/* ===== Listas ===== */
+/* ==================================================
+   LISTAS
+================================================== */
 ul {
   padding-left: 25px;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .precios li {
@@ -199,18 +191,20 @@ ul {
 }
 
 .precio {
-  color: #0066cc;
+  color: var(--color-primary);
   font-weight: bold;
 }
 
-/* ===== Botón de cita ===== */
+/* ==================================================
+   BOTONES CTA
+================================================== */
 .cta-container {
   text-align: center;
   margin: 40px 0;
 }
 
 .cta {
-  background-color: #0066cc;
+  background-color: var(--color-primary);
   color: white;
   border: none;
   padding: 15px 25px;
@@ -218,54 +212,49 @@ ul {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .cta:hover {
-  background-color: #004a99;
+  background-color: var(--color-primary-dark);
   transform: translateY(-2px);
 }
 
-
-/* Banner */
-
-.experience-home-banner {
-  position: relative;
+/* ==================================================
+   EXPERIENCE BANNER
+================================================== */
+.experience-banner {
   overflow: hidden;
   color: #fff;
   text-align: center;
   background: url('images/fondo_experiencia.png') center/cover no-repeat;
   padding: 60px 20px;
-  font-family: var(--font-inter, Arial, sans-serif);
 }
 
-/* Imagen alternativa para móvil */
-@media (max-width: 768px) {
-  .experience-home-banner {
-    background: url('images/fondo_experiencia_movil.png') center/cover no-repeat;
-  }
-}
-
-
-.experience-home-banner__filter {
-  background: rgba(0,0,0,0.5); /* filtro oscuro sobre la imagen */
+.experience-banner_recuadro {
+  background: rgba(0,0,0,0.5);
   padding: 40px 20px;
   border-radius: 15px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.experience-home-banner h2 {
+.experience-banner h2 {
   font-size: 2.2rem;
   margin-bottom: 15px;
-  color: var(--color-primary-lightest, #80d3f9);
+  color: var(--color-primary-lightest);
 }
 
-.experience-home-banner h3 {
+.experience-banner h3 {
   font-size: 1.1rem;
   margin-bottom: 35px;
   line-height: 1.5;
 }
 
+/* ==================================================
+   FLEX BLOQUES
+================================================== */
 .flex-wrapper {
   display: flex;
   justify-content: space-around;
@@ -285,7 +274,6 @@ ul {
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .flex-wrapper .flex:hover {
   transform: translateY(-5px);
@@ -308,51 +296,69 @@ ul {
   display: block;
   font-weight: bold;
   margin-top: 5px;
-  color: var(--color-primary-light, #5ec0f8);
+  color: var(--color-primary-light);
 }
 
-
-/* iconos experiencia */
+/* Iconos experiencia */
 .flex img {
-  filter: invert(48%) sepia(81%) saturate(2700%) hue-rotate(182deg) brightness(95%) contrast(92%);
+  filter: invert(48%) sepia(81%) saturate(2700%) hue-rotate(182deg)
+          brightness(95%) contrast(92%);
 }
 
-/* mapa */
+/* ==================================================
+   MAPA
+================================================== */
 .map-section {
-  margin-top: 50px; 
+  margin-top: 50px;
 }
 
-
-/* ===== Responsive ===== */
+/* ==================================================
+   RESPONSIVE (UNIFICADO)
+================================================== */
 @media (max-width: 768px) {
+
+  /* NAV */
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 102, 204, 0.95);
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* FOTO */
+  .foto-perfil {
+    width: 160px;
+    height: 160px;
+  }
+
+  /* FLEX */
   .flex-wrapper {
     flex-direction: column;
-    gap: 20px;
   }
 
   .flex-wrapper .flex {
     max-width: 100%;
   }
 
-  .experience-home-banner h2 {
-    font-size: 1.8rem;
-  }
-
-  .experience-home-banner h3 {
-    font-size: 1rem;
-  }
-
-}
-
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-
-  .foto-perfil {
-    width: 160px;
-    height: 160px;
-  }
-
+  /* TITULOS */
   h1 {
     font-size: 1.5em;
   }
@@ -361,8 +367,72 @@ ul {
     font-size: 1rem;
   }
 
+  /* CTA */
   .cta {
     padding: 12px 20px;
     font-size: 0.95rem;
   }
+
+  /* EXPERIENCE MOBILE BG */
+  .experience-banner {
+    background: url('images/fondo_experiencia_movil_2.png') center/cover no-repeat;
+  }
+
+  .experience-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  .experience-banner h3 {
+    font-size: 1rem;
+  }
+
+  /*HERO QUIEN SOY  */
+.hero-quien-soy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+
+     /* Mostramos toda la imagen sin cortar */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* Altura automática, solo lo que necesite el contenido + imagen */
+    height: auto;
+    width: 100%;
+  }
+
+  .hero-overlay {
+    display: flex;             /* lo hacemos flex para poder controlar espacios */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* H1 – Dr. Rafael */
+  .hero-quien-soy h1 {
+    order: -1;
+    margin-bottom: 2vh;
+    text-align: center;
+    color: #0066cc;
+    font-size: 8vw;
+    line-height: 1.2;
+  }
+
+  /* H2 – Médico Especialista */
+  .hero-quien-soy h2 {
+    margin-top: 20vh;         /* distancia desde la parte superior */
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 6vw;           /* tamaño responsive */
+    line-height: 1.2;
+    padding-left: 5%;          /* 🔹 mantiene espacio lateral incluso al agrandar */
+    padding-right: 5%;         /* 🔹 mantiene espacio lateral incluso al agrandar */
+    box-sizing: border-box;    /* 🔹 padding no rompe el layout */
+  }
+
+  
 }
