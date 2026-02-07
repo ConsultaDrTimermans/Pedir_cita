@@ -94,6 +94,7 @@ body {
   padding: 20px;
   text-align: center;
   border-radius: 10px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 /* ==================================================
@@ -313,6 +314,130 @@ ul {
 }
 
 /* ==================================================
+   SOCIAL
+================================================== */
+.social-links-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px 0;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    color: white;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Degradado para X (Twitter) - Negro elegante a Gris oscuro */
+.social-btn.twitter {
+    background: linear-gradient(135deg, #000000 0%, #2d3436 100%);
+}
+
+/* Degradado para Gmail - Rojo Google a Naranja vibrante */
+.social-btn.email {
+    background: linear-gradient(135deg, #f3e526 0%, #ff6b6b 100%);
+}
+
+/* Efecto de brillo al pasar el ratón */
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.social-btn:hover::before {
+    left: 100%;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.social-btn i {
+    font-size: 1.3rem;
+}
+
+/* El botón pequeño de copiar */
+/* Estilo para que el botón de copiar tenga texto */
+.copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #f0f0f0;
+    color: #555;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative; /* Necesario para el tooltip */
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover { background: #e8e8e8; }
+
+/* El mensajito flotante (Tooltip) */
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    bottom: 125%; /* Aparece arriba del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+/* Flechita del mensajito */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Clase que activaremos con JS */
+.tooltip.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Color verde para el botón al copiar */
+.copy-btn.success {
+    background-color: #27ae60 !important;
+    color: white !important;
+}
+
+/* ==================================================
    RESPONSIVE (UNIFICADO)
 ================================================== */
 @media (max-width: 768px) {
@@ -388,51 +513,34 @@ ul {
 
   /*HERO QUIEN SOY  */
 .hero-quien-soy {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 0vh;
-    padding-bottom: 0vh;
-
-     /* Mostramos toda la imagen sin cortar */
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: 100%;
+    /* Define la proporción exacta 3:2 */
+    aspect-ratio: 3 / 2; 
+    
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
-    /* Altura automática, solo lo que necesite el contenido + imagen */
-    height: auto;
-    width: 100%;
-  }
-
-  .hero-overlay {
-    display: flex;             /* lo hacemos flex para poder controlar espacios */
-    flex-direction: column;
+    /* Centrado total del contenido */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-  }
-
-  /* H1 – Dr. Rafael */
-  .hero-quien-soy h1 {
-    order: -1;
-    margin-bottom: 2vh;
     text-align: center;
-    color: #0066cc;
-    font-size: 8vw;
-    line-height: 1.2;
-  }
+}
 
-  /* H2 – Médico Especialista */
-  .hero-quien-soy h2 {
-    margin-top: 20vh;         /* distancia desde la parte superior */
-    margin-bottom: 0;
-    text-align: center;
-    font-size: 6vw;           /* tamaño responsive */
-    line-height: 1.2;
-    padding-left: 5%;          /* 🔹 mantiene espacio lateral incluso al agrandar */
-    padding-right: 5%;         /* 🔹 mantiene espacio lateral incluso al agrandar */
-    box-sizing: border-box;    /* 🔹 padding no rompe el layout */
-  }
+.hero-overlay {
+    /* Ya no necesita ser absoluto, el flex del padre lo centra */
+    padding: 20px;
+    color: white; /* Ajusta según necesites */
+}
 
+.hero-quien-soy h2 {
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    /* Tamaño para móvil */
+    font-size: 7vw; 
+    padding: 0 5%;
+}
   
 }

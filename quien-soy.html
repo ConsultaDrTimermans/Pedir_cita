@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quien Soy - Dr. Tímermans</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
   <!-- Menú hamburguesa -->
   <header class="header">
-    <div class="logo">Dr. Tímermans</div>
+    <div class="logo">Dr. Rafael Tímermans</div>
     <div class="hamburger" id="hamburger">&#9776;</div>
     <nav class="nav" id="nav">
       <ul>
@@ -23,7 +24,7 @@
   <!-- Hero -->
   <section class="hero-quien-soy" style="background-image: url('images/papa_elegante.jpg');">
     <div class="hero-overlay">
-      <h1>Dr. Rafael Tímermans</h1>
+      <!-- <h1>Dr. Rafael Tímermans</h1> -->
       <h2>Médico Especialista en Medicina del Trabajo</h2>
     </div>
   </section>
@@ -40,8 +41,25 @@
         <p>Soy padre implicado e interesado, que disfruto de tres hijos que lo son todo para mí.</p>
       </div>
 
+    <div class="social-links-container">
+      <a href="https://x.com/RafaelTimermans" class="social-btn twitter" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+        <span>Twitter</span>
+      </a>
+
+      <a href="mailto:rafatimer@gmail.com" class="social-btn email">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Email</span>        
+      </a>
+      <button onclick="copiarEmail()" class="copy-btn" id="btnCopiar">
+      <i class="fa-solid fa-copy" id="iconCopiar"></i>
+      <span class="copy-text">Copiar Email</span>
+      <span class="tooltip" id="miTooltip">¡Copiado!</span>
+    </button>
+    </div>
+
       <!-- Bloques de iconos -->
-      <div class="flex-wrapper">
+      <!-- <div class="flex-wrapper">
         <div class="flex">
           <img src="images/experiencia.svg" width="55" height="55" alt="Experiencia">
           <h3>20 años de experiencia</h3>
@@ -54,7 +72,7 @@
           <img src="images/asesoramiento.svg" width="55" height="55" alt="Asesoramiento">
           <h3>Asesoramiento ante mutuas e INSS</h3>
         </div>
-      </div>
+      </div> -->
 
       <div class="cta-container" style="margin-top:40px;">
         <a href="index.html" class="cta">Volver a inicio</a>
