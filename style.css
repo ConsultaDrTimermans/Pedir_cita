@@ -284,11 +284,6 @@ ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.flex-wrapper .flex:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
 .flex-wrapper .flex img {
   width: 55px;
   height: 55px;
