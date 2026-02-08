@@ -61,11 +61,19 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: 0.2s;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 .nav ul li a:hover {
-  color: #a0d2ff;
+  background-color: rgba(255,255,255,0.15);
 }
+
+.nav ul li a.active {
+  background-color: #fff;
+  color: #0066cc;
+}
+
 
 .hamburger {
   font-size: 1.8em;
@@ -459,10 +467,24 @@ ul {
     flex-direction: column;
   }
 
-  .nav ul li {
-    margin: 10px 0;
-    text-align: center;
-  }
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.nav ul li a:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+
+.nav ul li a.active {
+  background-color: #fff;
+  color: #0066cc;
+}
+
 
   .hamburger {
     display: block;

@@ -25,7 +25,7 @@ hamburger.addEventListener('click', () => {
 });
 
 function copiarEmail() {
-    const email = "rafatimer@gmail.com";
+    const email = "admongabinete@fundacionquerer.org";
     const btn = document.getElementById('btnCopiar');
     const icon = document.getElementById('iconCopiar');
     const tooltip = document.getElementById('miTooltip');
