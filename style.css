@@ -332,7 +332,7 @@ ul {
     flex-wrap: wrap;
 }
 
-.social-btn {
+/* .social-btn {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -346,6 +346,35 @@ ul {
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     position: relative;
     overflow: hidden;
+} */
+
+.social-btn, .copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 12px;
+    padding: 14px 0; /* Quitamos el padding lateral para que mande el width */
+    width: 150px;    /* O el ancho que prefieras, pero que sea el mismo para ambos */
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    border: none;    /* Para que el botón de copiar no tenga bordes raros */
+    cursor: pointer;
+}
+
+.social-btn{
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+/* Asegúrate de que el botón de copiar tenga el mismo gradiente o estilo base */
+.copy-btn {
+    background: linear-gradient(135deg, #636e72 0%, #2d3436 100%); /* Un color neutro */
 }
 
 /* Degradado para X (Twitter) - Negro elegante a Gris oscuro */
@@ -385,7 +414,7 @@ ul {
 
 /* El botón pequeño de copiar */
 /* Estilo para que el botón de copiar tenga texto */
-.copy-btn {
+/* .copy-btn {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -397,11 +426,11 @@ ul {
     cursor: pointer;
     font-weight: 600;
     font-family: 'Segoe UI', sans-serif;
-    position: relative; /* Necesario para el tooltip */
+    position: relative; 
     transition: all 0.3s ease;
-}
+} */
 
-.copy-btn:hover { background: #e8e8e8; }
+.copy-btn:hover { background: #0e6a7aab; }
 
 /* El mensajito flotante (Tooltip) */
 .tooltip {
